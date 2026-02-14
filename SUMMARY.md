@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Real-Time Competition](README.md)
+* [Haverford Robotics](README.md)
