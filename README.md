@@ -1,5 +1,5 @@
 ---
-description: Welcome to
+description: Welcome to Design and Build Resources.
 icon: house-window
 ---
 
