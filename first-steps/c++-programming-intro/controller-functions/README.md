@@ -19,16 +19,17 @@ The goal is: **“Press a button → intake moves.”**
 {% step %}
 ### Step 1 – Find `subsystems.hpp`
 
-1.  In your project, open the **`include`** folder in the file explorer.
+1. In your project, open the **`pros`** folder in the file explorer.
 
-    <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
-2. Inside `include`, look for a file named **`subsystems.hpp`**.
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+1. Inside `pros`, look for a file named **`subsystems.hpp`**.
 {% endstep %}
 
 {% step %}
 ### Step 2 – Create the intake motor in `subsystems.hpp`
 
-Open **`include/subsystems.hpp`** and see something like this inside:
+Open **`pros/subsystems.hpp`** and see something like this inside:
 
 {% code title="subsystems.hpp" overflow="wrap" lineNumbers="true" %}
 ```cpp

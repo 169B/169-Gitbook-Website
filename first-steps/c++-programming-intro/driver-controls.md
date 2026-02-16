@@ -23,20 +23,6 @@ In your project, open the `src` folder in the file explorer.
 {% endstep %}
 
 {% step %}
-### Opening `main.cpp`
-
-Inside the `src` folder, click **`main.cpp`**.
-
-This is where you'll configure:
-
-* Control schemes (tank or arcade)
-* Joystick curves
-* Active brake
-{% endstep %}
-{% endstepper %}
-
-***
-
 ### Control Schemes
 
 There are multiple ways to map the **joysticks** (the two sticks on your V5 controller) to your drive. The drive code supports:
@@ -65,6 +51,8 @@ void opcontrol() {
   }
 }
 ```
+{% endstep %}
+{% endstepper %}
 
 ***
 
