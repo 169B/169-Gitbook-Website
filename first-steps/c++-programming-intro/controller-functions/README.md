@@ -56,6 +56,12 @@ Eg: inline pross::Motor upper\_intake(10);
 
 Now edit it for **your robot**:
 
+Look at the orientation of the motor(s):
+
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+If the orientation of the motors in your drivetrain resembles this, ensure the connected port is positive in the code. **If the VEX logo is flipped, ensure the port number is negative.**
+
 1. Change `10` to the **port** your intake motor is plugged into on the brain.
 2. If the intake spins the **wrong way** when you test it later, make the number **negative** (for example, `-10`).
 
@@ -85,10 +91,8 @@ inline pros::MotorGroup intake({10, -11});
 
 Once you use a `MotorGroup` like this, all the code later on this page (`intake.move(127);`, etc.) works **exactly the same** – it will move **all** the motors in the group together.
 {% endstep %}
-{% endstepper %}
 
-***
-
+{% step %}
 ### Step 4 – Make the buttons move the intake (Driver Control)
 
 To move a motor in PROS, you call `move()` with a value between **`-127`** and **`127`**:
@@ -119,6 +123,8 @@ master.get_digital(DIGITAL_L1);  // true if L1 is currently held
 
 `DIGITAL_L1` and `DIGITAL_L2` are the **top left shoulder buttons**.
 
+<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="warning" %}
 **Do Option A or Option B below.**
 {% endhint %}
@@ -130,6 +136,10 @@ In this setup:
 * Hold **L1** → intake runs **forward**
 * Hold **L2** → intake runs **backward**
 * Let go of both → intake **stops**
+
+{% hint style="success" %}
+If you would like, **you can** **change the intake buttons to any of the buttons in the above picture: L1, L2, R1, R2, A, B, X, Y, UP, DOWN, LEFT, RIGHT -** by just substituting "DIGITAL\_L1" to "DIGITAL\_R1" or similar in the below code.
+{% endhint %}
 
 ```cpp
 if (master.get_digital(DIGITAL_L1)) {
@@ -194,6 +204,10 @@ In `opcontrol()`, this:
 
 In short: **always keep this delay at the bottom of the loop.**
 {% endhint %}
+{% endstep %}
+{% endstepper %}
+
+
 
 ***
 
