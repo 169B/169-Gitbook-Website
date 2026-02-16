@@ -93,7 +93,7 @@ Once you use a `MotorGroup` like this, all the code later on this page (`intake.
 {% endstep %}
 
 {% step %}
-### Step 4 – Make the buttons move the intake (Driver Control)
+### Step 3 – Make the buttons move the intake (Driver Control)
 
 To move a motor in PROS, you call `move()` with a value between **`-127`** and **`127`**:
 
@@ -205,13 +205,9 @@ In `opcontrol()`, this:
 In short: **always keep this delay at the bottom of the loop.**
 {% endhint %}
 {% endstep %}
-{% endstepper %}
 
-
-
-***
-
-### Step 5 – Make a toggle button (press once to start, press again to stop)
+{% step %}
+### Step 4 – Make a toggle button (press once to start, press again to stop)
 
 Sometimes you don’t want to **hold** a button down. Instead, you can use a **toggle**:
 
@@ -268,18 +264,39 @@ void opcontrol() {
 ```
 {% endcode %}
 
+Here's a shortened code snippet:
+
+```cpp
+bool intake_running = false;
+// If L1 was just pressed this moment, flip intake_running
+// MAKE SURE YOU ADD THE BOOL ABOVE AT THE START OF THE FUNCTION
+if (master.get_digital_new_press(DIGITAL_L1)) {
+  intake_running = !intake_running;  // true → false, false → true
+}
+
+// If intake_running is true, spin the intake
+if (intake_running) {
+  intake.move(127);
+}
+// If intake_running is false, stop the intake
+else {
+  intake.move(0);
+}
+
+```
+
 You can choose **either**:
 
 * Hold‑to‑run (L1 / L2)
 * Toggle‑to‑run (L1 only)
 
 Use whichever your driver prefers.
+{% endstep %}
 
-***
+{% step %}
+### Step 5 – (For Later) Use the intake in Autonomous
 
-### Step 6 – (Optional) Use the intake in Autonomous
-
-Because the intake motor is created in `subsystems.hpp`, you can also use it in **autonomous** with the **same `intake.move(...)` calls**.
+Because the intake motor is created in `subsystems.hpp`, you can also use it in **autonomous** mode with the **same `intake.move(...)` calls**.
 
 Below is an example autonomous routine:
 
@@ -296,6 +313,8 @@ The `pid_drive_set`, `pid_turn_set`, and similar functions will be explained on 
 
 For now, just notice **where** `intake.move(127);` and `intake.move(0);` are placed.
 {% endhint %}
+
+Where we are: ![](../../../.gitbook/assets/image.png)
 
 {% code title="autons.cpp – example intake autonomous" overflow="wrap" lineNumbers="true" %}
 ```cpp
@@ -332,6 +351,8 @@ void intake_autonomous() {
 }
 ```
 {% endcode %}
+{% endstep %}
+{% endstepper %}
 
 ***
 
@@ -341,10 +362,10 @@ If your intake is not working, check:
 
 
 
-1. The intake port number in `pros::Motor intake(...)` matches the **brain port**.
+1. The intake port number  `pros::Motor intake(...)` matches the **brain port**.
 2. Your intake code is **inside the `while (true)` loop** in `opcontrol()`.
 3. `pros::delay(ez::util::DELAY_TIME);` is still at the **bottom** of that loop.
 
-Once this works, you can repeat the same pattern for **other mechanisms** (arms, claws, wings, etc.) by adding more motors to `subsystems.hpp` and wiring them to controller buttons in `opcontrol()`.
+Once this works, you can repeat the same pattern for **other mechanisms** (arms, claws, wings, etc.) by adding more motors to `subsystems.hpp` and wiring them to controller buttons in `opcontrol()`. Make sure they have easily readable and unique names.
 
-Press next to go to more driver control functions.
+Press next to go to more driver control functions such as pistons.
