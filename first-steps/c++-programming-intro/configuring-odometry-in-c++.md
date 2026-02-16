@@ -21,7 +21,7 @@ Open the "src" folder on the right, if you have not done so already.
 {% endstep %}
 
 {% step %}
-### Configuring Odometry - main.cpp
+### Configuring Odometry Wheels and Directions - main.cpp
 
 You should see:
 
@@ -70,7 +70,7 @@ To help you for the Distance in Inches to Center of the Robot (Use a ruler):
 {% endstep %}
 
 {% step %}
-### Configuring Odometry - main.cpp
+### Configuring Odometry Position - main.cpp
 
 Next if you scroll down slightly, you should see:
 

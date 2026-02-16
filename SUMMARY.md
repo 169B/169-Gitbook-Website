@@ -4,24 +4,32 @@
 
 * [Home](README.md)
 
-## Resources
+## First Steps
 
-* [Part Ordering](resources/images-and-media.md)
-* [Competition Bin Checklist](resources/competition-bin-checklist.md)
+* [C++ Programming Intro](first-steps/c++-programming-intro/README.md)
+  * [Getting Setup with VSCode and PROS](first-steps/c++-programming-intro/readme.md)
+  * [Configuring Your Template](first-steps/c++-programming-intro/configuring-your-template.md)
+  * [Tracking Systems](first-steps/c++-programming-intro/readme-1.md)
+  * [Configuring Odometry in C++](first-steps/c++-programming-intro/configuring-odometry-in-c++.md)
+  * [Driver Controls](first-steps/c++-programming-intro/driver-controls.md)
+  * [Controller Functions](first-steps/c++-programming-intro/controller-functions/README.md)
+    * [Other Subsystems](first-steps/c++-programming-intro/controller-functions/other-subsystems.md)
+  * [Untitled](first-steps/c++-programming-intro/untitled.md)
 
-## Notebooking
+## Docs Pages
 
-* [Example Engineering Notebooks](notebooking/example-engineering-notebooks.md)
+* [Programming Templates](docs-pages/programming-templates.md)
 
-## Building
+## Robot Events API
 
-* [Build Home](building/build-home.md)
-* [Building](building/building.md)
-* [CAD Design](building/cad-design.md)
-* [Best Practices](building/best-practices.md)
-* [Drive Trains](building/drive-trains.md)
-* [Motors](building/motors.md)
-* [Metal](building/metal.md)
-* [Plastic](building/plastic.md)
-* [Pneumatics](building/pneumatics.md)
-* [Additional Mechanisms](building/additional-mechanisms.md)
+* ```yaml
+  type: builtin:openapi
+  props:
+    models: true
+    downloadLink: true
+  dependencies:
+    spec:
+      ref:
+        kind: openapi
+        spec: Robot-Events-API
+  ```
