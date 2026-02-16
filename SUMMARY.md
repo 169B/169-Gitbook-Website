@@ -15,7 +15,7 @@
 
 ## Building
 
-* [Building](building/building.md)
+* [Building Guide](building/building-guide.md)
 * [CAD Design](building/cad-design.md)
 * [Best Practices](building/best-practices.md)
 * [Drive Trains](building/drive-trains.md)
