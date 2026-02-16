@@ -19,17 +19,17 @@ The goal is: **“Press a button → intake moves.”**
 {% step %}
 ### Step 1 – Find `subsystems.hpp`
 
-1. In your project, open the **`pros`** folder in the file explorer.
+1. In your project, open the `include` folder in the file explorer.
 
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-1. Inside `pros`, look for a file named **`subsystems.hpp`**.
+1. Inside `include`, look for a file named **`subsystems.hpp`**.
 {% endstep %}
 
 {% step %}
 ### Step 2 – Create the intake motor in `subsystems.hpp`
 
-Open **`pros/subsystems.hpp`** and see something like this inside:
+Open **`include/subsystems.hpp`** and see something like this inside:
 
 {% code title="subsystems.hpp" overflow="wrap" lineNumbers="true" %}
 ```cpp
@@ -314,7 +314,7 @@ The `pid_drive_set`, `pid_turn_set`, and similar functions will be explained on 
 For now, just notice **where** `intake.move(127);` and `intake.move(0);` are placed.
 {% endhint %}
 
-Where we are: ![](../../../.gitbook/assets/image.png)
+Where we are: ![](<../../../.gitbook/assets/image (1).png>)
 
 {% code title="autons.cpp – example intake autonomous" overflow="wrap" lineNumbers="true" %}
 ```cpp
@@ -358,14 +358,25 @@ void intake_autonomous() {
 
 ### Quick checklist
 
-If your intake is not working, check:
-
-
+If your intake motor is not working/spinning, check:
 
 1. The intake port number  `pros::Motor intake(...)` matches the **brain port**.
 2. Your intake code is **inside the `while (true)` loop** in `opcontrol()`.
 3. `pros::delay(ez::util::DELAY_TIME);` is still at the **bottom** of that loop.
 
-Once this works, you can repeat the same pattern for **other mechanisms** (arms, claws, wings, etc.) by adding more motors to `subsystems.hpp` and wiring them to controller buttons in `opcontrol()`. Make sure they have easily readable and unique names.
+Once this works, you can repeat the same pattern for **other mechanisms** (arms, claws, wings, etc.) by adding more motors to `subsystems.hpp` and wiring them to the controller buttons in `opcontrol()`.&#x20;
 
-Press next to go to more driver control functions such as pistons.
+{% hint style="warning" %}
+Make sure they have easily readable and unique names, eg:
+
+```
+inline pros::Motor intake(10);
+inline pros::Motor hood_motor(9);
+inline pros::Motor intake_2(8);
+// Motor Names cannot have spaces within them, use none, _ or - instead
+```
+{% endhint %}
+
+Press next to go to more driver control functions, such as pistons.
+
+You are ⅔ the way there!
