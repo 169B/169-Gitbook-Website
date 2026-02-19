@@ -3,7 +3,26 @@ description: Welcome to your team’s developer platform
 icon: horse-head
 cover: .gitbook/assets/maxresdefault (1).jpg
 coverY: 3.551131178275423e-14
-coverHeight: 449
+coverHeight: 397
+layout:
+  width: wide
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: false
+  metadata:
+    visible: false
+  tags:
+    visible: true
 ---
 
 # Haverford Robotics
