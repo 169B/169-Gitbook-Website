@@ -21,7 +21,7 @@ The goal is: **“Press a button → intake moves.”**
 
 1. In your project, open the `include` folder in the file explorer.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 1. Inside `include`, look for a file named **`subsystems.hpp`**.
 {% endstep %}
@@ -314,7 +314,7 @@ The `pid_drive_set`, `pid_turn_set`, and similar functions will be explained on 
 For now, just notice **where** `intake.move(127);` and `intake.move(0);` are placed.
 {% endhint %}
 
-Where we are: ![](<../../../.gitbook/assets/image (1).png>)
+Where we are: ![](<../../../.gitbook/assets/image (1) (1).png>)
 
 {% code title="autons.cpp – example intake autonomous" overflow="wrap" lineNumbers="true" %}
 ```cpp
