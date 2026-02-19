@@ -14,7 +14,7 @@
   * [Driver Controls](first-steps/c++-programming-intro/driver-controls.md)
   * [Controller Functions](first-steps/c++-programming-intro/controller-functions/README.md)
     * [Pistons (Pneumatics)](first-steps/c++-programming-intro/controller-functions/pistons-pneumatics.md)
-  * [Untitled](first-steps/c++-programming-intro/untitled.md)
+  * [Autonomous Route Intro](first-steps/c++-programming-intro/autonomous-route-intro.md)
 
 ## Docs Pages
 
