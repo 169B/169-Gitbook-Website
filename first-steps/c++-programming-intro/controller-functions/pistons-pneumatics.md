@@ -41,13 +41,13 @@ Open `include/subsystems.hpp`.
 
 <figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="334"><figcaption></figcaption></figure>
 
-Add a `pros::adi::DigitalOut` for your piston:
+Add a inline ez::Piston PISTON\_NAME('PORT'); for your piston:
 
 {% code title="subsystems.hpp – single piston" overflow="wrap" lineNumbers="true" %}
 ```cpp
 // Put your motors, sensors, etc. here
 
-inline pros::adi::DigitalOut clamp('A');   // Change 'A' to your ADI port letter
+inline ez::Piston doinker('A');   // Change 'A' to your ADI port letter
 ```
 {% endcode %}
 
