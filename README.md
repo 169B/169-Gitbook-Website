@@ -22,7 +22,7 @@ coverHeight: 449
 
 {% columns %}
 {% column width="33.33333333333333%" %}
-##
+
 
 > ## **"Make it Exist First, Make it Good Later."**
 {% endcolumn %}
