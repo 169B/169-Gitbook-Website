@@ -66,6 +66,10 @@ Now you can configure the trackers.&#x20;
 
 To help you for the Distance in Inches to Center of the Robot (Use a ruler):
 
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
+Another Helpful Picture:
+
 <img src="../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
 {% endstep %}
 
